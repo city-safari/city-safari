@@ -29,10 +29,7 @@ class MainActivity : ComponentActivity() {
                     Greeting("Android")
                 }
                     SearchBox(
-                    modifier = Modifier
-
-                        .padding(16.dp)
-                )
+                    modifier = Modifier.padding(16.dp))
             }
         }
     }
@@ -42,14 +39,11 @@ class MainActivity : ComponentActivity() {
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Surface(color = Color.Cyan) {
     Text(
-        text = "Welcome to TravelMore, $name!",
+        text = "Welcome to City Safari, $name!",
         modifier = modifier.padding(24.dp)
     )
 }
 }
-
-
-
 
 
 @Preview(showBackground = true)
