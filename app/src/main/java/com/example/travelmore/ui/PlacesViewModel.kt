@@ -17,7 +17,7 @@ private val radius = 5000  // 5 kilometers
 private val type = "bar"
 // update API key to
 // private val apiKey = "${GOOGLE_API_KEY}"
-private val apiKey = ""
+private val apiKey = BuildConfig.GOOGLE_API_KEY
 
 
 sealed class PlacesUiState {
