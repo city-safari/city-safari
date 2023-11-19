@@ -37,17 +37,18 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    // Greeting("Android")
 
                     val placesViewModel: PlacesViewModel = viewModel()
                     PlacesApp(
                         placesUIState = placesViewModel.placesUiState,
                     )
                 }
+                Greeting("Android")
                 SearchBox("")
 
             }
-                Results("")
+                // Results("")
 
         }
 
@@ -133,7 +134,7 @@ fun SearchBox(name: String, modifier: Modifier = Modifier) {
 }
 
 
-@Composable
+/*@Composable
     fun Results(name: String, modifier: Modifier = Modifier) {
         Surface(color = Color.Cyan) {
             Text(
@@ -142,7 +143,7 @@ fun SearchBox(name: String, modifier: Modifier = Modifier) {
             )
         }
     }
-
+*/
 
     @Preview(showBackground = true)
     @Composable
@@ -164,14 +165,14 @@ fun SearchBox(name: String, modifier: Modifier = Modifier) {
         }
     }
 
-    @Preview(showBackground = true)
+    /* @Preview(showBackground = true)
     @Composable
     fun ResultsPreview() {
         TravelMoreTheme {
             Results("")
         }
     }
-
+    */
 
 
 
