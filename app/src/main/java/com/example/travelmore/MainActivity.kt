@@ -14,7 +14,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.travelmore.ui.theme.TravelMoreTheme
-import com.example.travelmore.SearchBox
+
+
+
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,37 +31,82 @@ class MainActivity : ComponentActivity() {
                 ) {
                     Greeting("Android")
                 }
-                    SearchBox(
-                    modifier = Modifier.padding(16.dp))
+                SearchBox("")
+
             }
+                Results("")
+            }
+
+
+
+    }
+}
+
+
+    @Composable
+    fun Greeting(name: String, modifier: Modifier = Modifier) {
+        Surface(color = Color.Cyan) {
+            Text(
+                text = "Welcome to City Safari $name!",
+                modifier = modifier.padding(24.dp)
+            )
         }
     }
-}
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun SearchBox(name: String, modifier: Modifier = Modifier) {
     Surface(color = Color.Cyan) {
-    Text(
-        text = "Welcome to City Safari, $name!",
-        modifier = modifier.padding(24.dp)
-    )
-}
-}
-
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    TravelMoreTheme {
-        Greeting("Saira")
+        Text(
+            text = "Where do you want to go?",
+            modifier = modifier.padding(24.dp)
+        )
     }
 }
 
-@Preview(showBackground = true)
+
 @Composable
-fun SearchPreview() {
-    TravelMoreTheme {
-        // Preview your SearchBox composable
-        SearchBox(modifier = Modifier.padding(16.dp))
+    fun Results(name: String, modifier: Modifier = Modifier) {
+        Surface(color = Color.Cyan) {
+            Text(
+                text = "Search results",
+                modifier = modifier.padding(24.dp)
+            )
+        }
     }
-}
+
+
+    @Preview(showBackground = true)
+    @Composable
+    fun GreetingPreview() {
+        TravelMoreTheme {
+            Greeting("")
+        }
+    }
+
+    @Preview(showBackground = true)
+    @Composable
+    fun SearchPreview() {
+        TravelMoreTheme {
+            // Preview your SearchBox composable
+            SearchBox(
+                modifier = Modifier.padding(8.dp)
+
+            )
+        }
+    }
+
+    @Preview(showBackground = true)
+    @Composable
+    fun ResultsPreview() {
+        TravelMoreTheme {
+            Results("")
+        }
+    }
+
+
+
+
+
+
+
+
