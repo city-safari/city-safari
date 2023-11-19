@@ -15,7 +15,7 @@ import java.io.IOException
 private val location = "37.423,-122.083"
 private val radius = 5000  // 5 kilometers
 private val type = "bar"
-private var apiKey = com.example.travelmore.BuildConfig.GOOGLE_API_KEY
+private val apiKey = com.example.travelmore.BuildConfig.GOOGLE_API_KEY
 
 
 sealed class PlacesUiState {
