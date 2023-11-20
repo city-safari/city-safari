@@ -27,6 +27,7 @@ import com.example.travelmore.ui.PlacesViewModel
 import com.example.travelmore.ui.theme.TravelMoreTheme
 
 
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
